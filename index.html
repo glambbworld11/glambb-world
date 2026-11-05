@@ -4,8 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glambb World | Everyday Elegance</title>
-<meta name="description" content="Discover beautiful bracelets, earrings, necklaces and anklets at Glambb World. Shop our collections on Amazon India.">
+
+<title>Glambb World | Little Details. Beautiful Moments.</title>
+<meta name="description" content="Discover beautiful bracelets, earrings, necklaces and anklets at Glambb World. Shop our collection on Amazon India.">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNKJ3SGEMZ"></script>
@@ -18,849 +19,1119 @@
 
 <style>
 :root {
-  --primary:#8b5269;
-  --secondary:#ead9d5;
-  --background:#fbf7f4;
-  --ink:#30252a;
-  --muted:#786b70;
-  --line:#e8ddda;
-  --surface:#fff;
-}
-* {box-sizing:border-box}
-html {scroll-behavior:smooth;scroll-padding-top:20px}
-body {
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--background);
-  color:var(--ink);
-}
-a {color:inherit}
-.announcement {
-  background:var(--primary);
-  color:white;
-  text-align:center;
-  padding:11px 15px;
-  font-size:11px;
-  letter-spacing:.13em;
-}
-header {
-  max-width:1180px;
-  margin:auto;
-  padding:22px 28px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-.brand {
-  font:700 28px Georgia,serif;
-  letter-spacing:.03em;
-  color:var(--primary);
-  text-decoration:none;
-}
-.brand small {
-  display:block;
-  font:10px Arial,sans-serif;
-  letter-spacing:.32em;
-  text-align:center;
-  margin-top:4px;
-  color:var(--muted);
-}
-nav {
-  display:flex;
-  gap:23px;
-  align-items:center;
-  font-size:13px;
-}
-nav a {text-decoration:none}
-nav a:hover {color:var(--primary)}
-.menu {
-  display:none;
-  border:1px solid var(--line);
-  background:white;
-  padding:9px 13px;
-  border-radius:20px;
-}
-.hero {
-  max-width:1180px;
-  margin:auto;
-  padding:24px 28px 60px;
-}
-.hero-panel {
-  min-height:420px;
-  border-radius:24px;
-  background:linear-gradient(112deg,#ead9d5 0%,#f4e9e4 48%,#d8b9bd 100%);
-  display:grid;
-  grid-template-columns:.85fr 1.15fr;
-  overflow:hidden;
-}
-.hero-copy {
-  padding:55px 7%;
-  align-self:center;
-  position:relative;
-  z-index:2;
-}
-.eyebrow {
-  font-size:11px;
-  letter-spacing:.22em;
-  color:var(--primary);
-  text-transform:uppercase;
-  font-weight:700;
-}
-h1,h2,h3 {
-  font-family:Georgia,'Times New Roman',serif;
-  font-weight:500;
-}
-h1 {
-  font-size:clamp(38px,4.5vw,62px);
-  line-height:1.02;
-  margin:18px 0;
-  max-width:550px;
-  color:#422c35;
-}
-.hero-copy p {
-  color:#66545c;
-  line-height:1.8;
-  max-width:440px;
-  font-size:14px;
-}
-.btn {
-  display:inline-block;
-  margin-top:18px;
-  padding:14px 24px;
-  border-radius:30px;
-  background:var(--primary);
-  color:white;
-  text-decoration:none;
-  font-size:11px;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  border:1px solid var(--primary);
-  transition:.2s;
-}
-.btn:hover {
-  background:#6f3e53;
-  transform:translateY(-2px);
+  --pink: #8b5269;
+  --pink-dark: #704054;
+  --rose: #ead9d5;
+  --cream: #fbf7f4;
+  --ink: #402d36;
+  --muted: #786b70;
+  --border: #eadedb;
+  --white: #ffffff;
 }
 
-/* HERO PRODUCT SLIDER */
-.hero-art {
-  min-width:0;
-  min-height:380px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  padding:25px 0;
+* {
+  box-sizing: border-box;
 }
-.hero-slider {
-  width:100%;
-  overflow:hidden;
-  position:relative;
-  -webkit-mask-image:linear-gradient(to right,transparent,black 5%,black 95%,transparent);
-  mask-image:linear-gradient(to right,transparent,black 5%,black 95%,transparent);
+
+html {
+  scroll-behavior: smooth;
 }
-.hero-track {
-  display:flex;
-  width:max-content;
-  gap:16px;
-  animation:glambbSlide 48s linear infinite;
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
 }
-.hero-slider:hover .hero-track {
-  animation-play-state:paused;
+
+a {
+  color: inherit;
 }
-.hero-product {
-  flex:0 0 190px;
-  width:190px;
-  min-height:285px;
-  padding:13px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:space-between;
-  text-align:center;
-  text-decoration:none;
-  background:rgba(255,255,255,.9);
-  border:1px solid #ead9d5;
-  border-radius:18px;
-  box-shadow:0 12px 30px #80596918;
-  transition:transform .25s,box-shadow .25s;
+
+.announcement {
+  background: var(--pink);
+  color: white;
+  text-align: center;
+  padding: 11px 12px;
+  font-size: 10px;
+  letter-spacing: .16em;
 }
-.hero-product:hover {
-  transform:translateY(-7px);
-  box-shadow:0 15px 30px #80596930;
+
+header {
+  max-width: 1180px;
+  margin: auto;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
-.hero-product img {
-  width:100%;
-  height:175px;
-  object-fit:contain;
-  background:white;
-  border-radius:12px;
+
+.brand {
+  color: var(--pink);
+  text-decoration: none;
+  font: bold 28px Georgia, serif;
 }
-.hero-product span {
-  display:block;
-  margin:10px 0;
-  color:#422c35;
-  font:16px Georgia,serif;
-  line-height:1.35;
+
+.brand small {
+  display: block;
+  text-align: center;
+  font: 9px Arial, sans-serif;
+  letter-spacing: .3em;
+  margin-top: 5px;
+  color: var(--muted);
 }
-.hero-product b {
-  display:block;
-  width:100%;
-  padding:10px 8px;
-  color:white;
-  background:var(--primary);
-  border-radius:22px;
-  font-size:10px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
+
+nav {
+  display: flex;
+  gap: 23px;
+  align-items: center;
 }
-@keyframes glambbSlide {
-  from {transform:translateX(0)}
-  to {transform:translateX(-50%)}
+
+nav a {
+  text-decoration: none;
+  font-size: 12px;
 }
-section {
-  max-width:1180px;
-  margin:auto;
-  padding:58px 28px;
+
+nav a:hover {
+  color: var(--pink);
 }
-.section-head {
-  text-align:center;
-  margin-bottom:32px;
+
+/* MAIN HERO SECTION */
+
+.hero {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 15px 28px 55px;
 }
-.section-head h2 {
-  font-size:38px;
-  margin:10px 0;
+
+.hero-panel {
+  overflow: hidden;
+  border-radius: 25px;
+  padding: 38px 0 36px;
+  background: linear-gradient(
+    115deg,
+    #ead9d5 0%,
+    #f5eae5 48%,
+    #d9bcc1 100%
+  );
+  text-align: center;
 }
-.section-head p {
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.7;
+
+.hero-heading {
+  padding: 0 18px;
+  margin-bottom: 27px;
 }
+
+.hero-eyebrow {
+  color: var(--pink);
+  font-size: 10px;
+  letter-spacing: .23em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+
+.hero-heading h1 {
+  margin: 0;
+  color: #422c35;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(19px, 3.8vw, 45px);
+  letter-spacing: -.035em;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+/* AUTOMATIC SLIDER */
+
+.slider-wrap {
+  width: 100%;
+  padding: 5px 0 12px;
+  position: relative;
+}
+
+.product-slider {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  cursor: grab;
+}
+
+.product-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.product-track {
+  display: flex;
+  align-items: stretch;
+  gap: 17px;
+  width: max-content;
+  padding: 8px 28px;
+}
+
+.slide-card {
+  flex: 0 0 190px;
+  width: 190px;
+  min-height: 285px;
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.94);
+  border: 1px solid rgba(255,255,255,.8);
+  box-shadow: 0 9px 24px rgba(78,44,58,.09);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.slide-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(78,44,58,.16);
+}
+
+.slide-card img {
+  display: block;
+  width: 100%;
+  height: 174px;
+  object-fit: contain;
+  background: white;
+  border-radius: 12px;
+}
+
+.slide-card h3 {
+  color: var(--ink);
+  font: 16px/1.3 Georgia, serif;
+  margin: 10px 0;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-buy {
+  width: 100%;
+  padding: 11px 8px;
+  border-radius: 25px;
+  background: var(--pink);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.slide-card:hover .slide-buy {
+  background: var(--pink-dark);
+}
+
+.slider-hint {
+  margin-top: 8px;
+  color: #8b5269;
+  font-size: 10px;
+  letter-spacing: .1em;
+}
+
+/* HERO DESCRIPTION */
+
+.hero-bottom {
+  max-width: 680px;
+  padding: 0 22px;
+  margin: 26px auto 0;
+}
+
+.hero-bottom h2 {
+  font: 24px Georgia, serif;
+  color: #533846;
+  margin: 0 0 9px;
+}
+
+.hero-bottom p {
+  color: #6c5961;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 auto;
+}
+
+.main-button {
+  display: inline-block;
+  margin-top: 19px;
+  padding: 14px 27px;
+  border-radius: 30px;
+  background: var(--pink);
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  transition: .2s;
+}
+
+.main-button:hover {
+  background: var(--pink-dark);
+  transform: translateY(-2px);
+}
+
+/* FEATURES */
+
 .feature-band {
-  background:var(--secondary);
-  color:#422c35;
+  background: var(--rose);
 }
+
 .feature-inner {
-  max-width:1180px;
-  margin:auto;
-  padding:48px 28px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-  text-align:center;
+  max-width: 1180px;
+  margin: auto;
+  padding: 39px 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  text-align: center;
 }
-.feature-inner strong {
-  display:block;
-  font:24px Georgia,serif;
-  margin-bottom:8px;
+
+.feature-item strong {
+  display: block;
+  font: 22px Georgia, serif;
+  color: #533846;
+  margin-bottom: 9px;
 }
-.feature-inner span {
-  font-size:13px;
-  color:#6b555d;
-  line-height:1.6;
+
+.feature-item span {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #735e66;
 }
-.collection-section {
-  padding-top:58px;
-  padding-bottom:35px;
+
+/* PRODUCT COLLECTIONS */
+
+.collection {
+  max-width: 1180px;
+  margin: auto;
+  padding: 58px 28px 30px;
 }
-.collection-title {
-  text-align:center;
-  margin-bottom:28px;
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
 }
-.collection-title h2 {
-  font-size:34px;
-  margin:8px 0;
+
+.section-heading .eyebrow {
+  color: var(--pink);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-.collection-title p {
-  font-size:13px;
-  color:var(--muted);
+
+.section-heading h2 {
+  font: 37px Georgia, serif;
+  margin: 10px 0;
+  color: #422c35;
 }
-.products {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:22px;
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
 }
-.product {
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:16px;
-  overflow:hidden;
-  transition:.25s;
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 22px;
 }
-.product:hover {
-  transform:translateY(-4px);
-  box-shadow:0 12px 28px #49313d12;
+
+.product-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: white;
+  transition: .25s;
 }
-.product-image {
-  height:260px;
-  background:#fff;
-  padding:15px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(60,35,45,.1);
 }
-.product-image img {
-  width:100%;
-  height:100%;
-  object-fit:contain;
+
+.product-card-image {
+  height: 255px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
 }
-.product-info {padding:18px}
-.product-info h3 {
-  font-size:20px;
-  margin:0 0 8px;
-  min-height:48px;
+
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-.product-info p {
-  font-size:13px;
-  color:var(--muted);
-  line-height:1.6;
-  margin:0;
-  min-height:42px;
+
+.product-card-info {
+  padding: 17px;
 }
+
 .product-tag {
-  display:inline-block;
-  background:#f5e9ed;
-  color:#8b5269;
-  padding:6px 10px;
-  border-radius:20px;
-  font-size:10px;
-  letter-spacing:.06em;
-  margin-bottom:12px;
+  display: inline-block;
+  background: #f5e9ed;
+  color: var(--pink);
+  border-radius: 20px;
+  padding: 6px 10px;
+  font-size: 9px;
+  letter-spacing: .06em;
+  margin-bottom: 10px;
 }
-.buy-btn {
-  display:block;
-  text-align:center;
-  margin-top:15px;
-  padding:12px 15px;
-  background:var(--primary);
-  color:white;
-  border-radius:25px;
-  text-decoration:none;
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.08em;
-  transition:.2s;
+
+.product-card-info h3 {
+  min-height: 43px;
+  font: 20px Georgia, serif;
+  margin: 0 0 9px;
 }
-.buy-btn:hover {background:#6f3e53}
+
+.product-card-info p {
+  min-height: 43px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.buy-button {
+  display: block;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 25px;
+  text-align: center;
+  background: var(--pink);
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: .08em;
+}
+
+.buy-button:hover {
+  background: var(--pink-dark);
+}
+
+/* ABOUT */
+
 .about {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
+  max-width: 1180px;
+  margin: auto;
+  padding: 65px 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
 }
+
 .about-art {
-  min-height:300px;
-  border-radius:20px;
-  background:linear-gradient(135deg,#e8d4d0,#cdaeb7);
-  display:grid;
-  place-items:center;
-  font:42px Georgia,serif;
-  color:#fff9f5;
-  text-align:center;
-  padding:25px;
+  min-height: 300px;
+  border-radius: 22px;
+  background: linear-gradient(135deg,#e8d4d0,#cdaeb7);
+  display: grid;
+  place-items: center;
+  color: #fff9f5;
+  text-align: center;
+  font: 38px/1.3 Georgia, serif;
+  padding: 25px;
 }
-.about h2 {
-  font-size:42px;
-  margin:12px 0;
+
+.about-copy .eyebrow {
+  color: var(--pink);
+  font-size: 10px;
+  letter-spacing: .2em;
 }
-.about p {
-  color:var(--muted);
-  line-height:1.9;
-  font-size:14px;
+
+.about-copy h2 {
+  font: 42px Georgia, serif;
+  margin: 14px 0;
 }
+
+.about-copy p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* CALL TO ACTION */
+
 .cta {
-  background:#49313d;
-  color:white;
-  text-align:center;
-  padding:58px 20px;
+  padding: 58px 20px;
+  text-align: center;
+  background: #49313d;
+  color: white;
 }
+
 .cta h2 {
-  font-size:38px;
-  margin:0 0 12px;
+  font: 38px Georgia, serif;
+  margin: 0 0 12px;
 }
+
 .cta p {
-  color:#e5d6dc;
-  font-size:14px;
+  color: #e5d6dc;
+  font-size: 13px;
+  line-height: 1.7;
 }
-.cta .btn {
-  background:#ead9d5;
-  color:#49313d;
-  border-color:#ead9d5;
+
+.cta .main-button {
+  background: var(--rose);
+  color: #49313d;
 }
+
+/* FOOTER */
+
 footer {
-  background:#2e2229;
-  color:#eee3e7;
-  padding:35px 28px;
-  text-align:center;
+  padding: 35px 20px;
+  text-align: center;
+  background: #2e2229;
+  color: #eee3e7;
 }
-footer .brand {color:#f1dfe5}
+
+footer .brand {
+  color: #f1dfe5;
+}
+
 footer p {
-  color:#c7b8bf;
-  font-size:12px;
-  line-height:1.8;
+  color: #c7b8bf;
+  font-size: 12px;
+  line-height: 1.8;
 }
-footer a {color:#f1dfe5}
-.footlinks {
-  display:flex;
-  justify-content:center;
-  gap:22px;
-  flex-wrap:wrap;
-  margin:20px 0;
-  font-size:12px;
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: 20px 0;
+  font-size: 11px;
 }
-.note {
-  font-size:11px;
-  color:#b9aab1;
+
+.footer-links a {
+  color: #f1dfe5;
+  text-decoration: none;
 }
+
+.footer-note {
+  color: #b9aab1;
+  font-size: 10px;
+}
+
+/* MOBILE */
 
 @media(max-width:760px) {
-  header {padding:18px}
-  nav {display:none}
-  .menu {display:block}
-  .hero {padding:10px 16px 38px}
-  .hero-panel {grid-template-columns:1fr}
-  .hero-copy {padding:42px 25px 10px}
-  .hero-art {
-    min-height:315px;
-    padding:15px 0 30px;
+  header {
+    padding: 17px 18px;
   }
-  .hero-product {
-    flex-basis:165px;
-    width:165px;
-    min-height:260px;
+
+  nav {
+    display: none;
   }
-  .hero-product img {height:155px}
-  .hero-track {gap:12px;animation-duration:42s}
-  section {padding:44px 18px}
-  .products {
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:12px;
+
+  .hero {
+    padding: 10px 13px 38px;
   }
-  .product-image {height:190px;padding:10px}
-  .product-info {padding:12px}
-  .product-info h3 {
-    font-size:17px;
-    min-height:42px;
+
+  .hero-panel {
+    padding: 30px 0;
+    border-radius: 20px;
   }
-  .product-info p {
-    font-size:12px;
-    min-height:55px;
+
+  .hero-heading {
+    margin-bottom: 17px;
   }
-  .buy-btn {font-size:10px;padding:11px 8px}
+
+  .hero-heading h1 {
+    font-size: clamp(17px, 4.6vw, 29px);
+    letter-spacing: -.045em;
+  }
+
+  .product-track {
+    gap: 12px;
+    padding: 8px 15px;
+  }
+
+  .slide-card {
+    flex-basis: 160px;
+    width: 160px;
+    min-height: 255px;
+    padding: 10px;
+  }
+
+  .slide-card img {
+    height: 150px;
+  }
+
+  .slide-card h3 {
+    font-size: 14px;
+  }
+
+  .hero-bottom {
+    margin-top: 19px;
+  }
+
+  .hero-bottom h2 {
+    font-size: 21px;
+  }
+
+  .hero-bottom p {
+    font-size: 12px;
+  }
+
   .feature-inner {
-    grid-template-columns:1fr;
-    gap:25px;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 35px 20px;
   }
+
+  .collection {
+    padding: 42px 16px 22px;
+  }
+
+  .section-heading h2 {
+    font-size: 31px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 12px;
+  }
+
+  .product-card-image {
+    height: 185px;
+    padding: 9px;
+  }
+
+  .product-card-info {
+    padding: 12px;
+  }
+
+  .product-card-info h3 {
+    font-size: 16px;
+    min-height: 40px;
+  }
+
+  .product-card-info p {
+    font-size: 11px;
+    min-height: 60px;
+  }
+
+  .buy-button {
+    padding: 11px 6px;
+    font-size: 9px;
+  }
+
   .about {
-    grid-template-columns:1fr;
-    gap:25px;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 45px 18px;
   }
-  .about-art {min-height:220px}
-  .section-head h2 {font-size:32px}
+
+  .about-art {
+    min-height: 220px;
+  }
+
+  .about-copy h2 {
+    font-size: 35px;
+  }
+
+  .cta h2 {
+    font-size: 31px;
+  }
 }
-@media(max-width:380px) {
-  .products {grid-template-columns:1fr}
-  .product-image {height:250px}
-}
-@media(prefers-reduced-motion:reduce) {
-  .hero-track {animation:none}
+
+@media(max-width:360px) {
+  .hero-heading h1 {
+    font-size: 16px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card-image {
+    height: 240px;
+  }
 }
 </style>
 </head>
 
 <body>
-<div id="site">
 
-  <div class="announcement">
-    A LITTLE SPARKLE, A LOT OF PERSONALITY · DISCOVER YOUR EVERYDAY STYLE
-  </div>
-
-  <header>
-    <a class="brand" href="#home">
-      Glambb World
-      <small>STYLE • BEAUTY • YOU</small>
-    </a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#bracelets">Bracelets</a>
-      <a href="#earrings">Earrings</a>
-      <a href="#necklaces">Necklaces</a>
-      <a href="#anklets">Anklets</a>
-      <a href="#about">About</a>
-    </nav>
-    <button class="menu" onclick="document.getElementById('bracelets').scrollIntoView({behavior:'smooth'})">
-      Explore ↓
-    </button>
-  </header>
-
-  <main>
-    <!-- HERO WITH AUTOMATIC PRODUCT SLIDER -->
-    <div class="hero" id="home">
-      <div class="hero-panel">
-
-        <div class="hero-copy">
-          <div class="eyebrow">Welcome to Glambb World</div>
-          <h1>Little Details. Beautiful Moments.</h1>
-          <p>
-            Discover your next favourite accessory. Elegant bracelets,
-            beautiful earrings and more — made to make every moment special.
-          </p>
-          <a class="btn"
-             href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share"
-             target="_blank" rel="noopener">
-            Explore Our Collection ↗
-          </a>
-          <div style="margin-top:22px;color:#8b5269;font:14px Georgia,serif;letter-spacing:.08em">
-            ✧ Discover your everyday sparkle ✧
-          </div>
-        </div>
-
-        <div class="hero-art">
-          <div class="hero-slider">
-            <div class="hero-track" id="heroTrack">
-
-              <a class="hero-product" href="https://www.amazon.in/dp/B0HCDP2DBB" target="_blank" rel="noopener">
-                <img src="https://m.media-amazon.com/images/I/61LfpdsUTXL._SY695_.jpg" alt="American Diamond Bracelet">
-                <span>American Diamond Bracelet</span>
-                <b>Shop Now ↗</b>
-              </a>
-
-              <a class="hero-product" href="https://www.amazon.in/dp/B0HG1Z8P5Q" target="_blank" rel="noopener">
-                <img src="https://m.media-amazon.com/images/I/51pUyoJ5DBL._AC_UY218_.jpg" alt="Sparkling Baguette Bracelet">
-                <span>Sparkling Baguette Bracelet</span>
-                <b>Shop Now ↗</b>
-              </a>
-
-              <a class="hero-product" href="https://www.amazon.in/dp/B0HFX2DPNQ" target="_blank" rel="noopener">
-                <img src="https://m.media-amazon.com/images/I/41HTJa6GiAL._AC_UY218_.jpg" alt="Adjustable Anti Tarnish Bracelet">
-                <span>Adjustable Anti-Tarnish Bracelet</span>
-                <b>Shop Now ↗</b>
-              </a>
-
-              <a class="hero-product" href="https://www.amazon.in/dp/B0HCJRPQQP" target="_blank" rel="noopener">
-                <img src="https://m.media-amazon.com/images/I/6175n5FzFLL._AC_UY218_.jpg" alt="GLAMBB Stretch Bracelet">
-                <span>GLAMBB Stretch Bracelet</span>
-                <b>Shop Now ↗</b>
-              </a>
-
-              <a class="hero-product" href="https://www.amazon.in/dp/B0HC7VX1WS" target="_blank" rel="noopener">
-                <img src="https://m.media-amazon.com/images/I/61W4y7rC-AL._AC_UY218_.jpg" alt="American Diamond Earrings">
-                <span>American Diamond Earrings</span>
-                <b>Shop Now ↗</b>
-              </a>
-
-              <a class="hero-product" href="https://www.amazon.in/dp/B0HCBQCLG2" target="_blank" rel="noopener">
-                <img src="https://m.media-amazon.com/images/I/61O9nk0chxL._AC_UY218_.jpg" alt="Traditional Festival Earrings">
-                <span>Traditional Festival Earrings</span>
-                <b>Shop Now ↗</b>
-              </a>
-
-              <a class="hero-product" href="https://www.amazon.in/dp/B0HCBWN7WF" target="_blank" rel="noopener">
-                <img src="https://m.media-amazon.com/images/I/71KxHpqYsAL._AC_UY218_.jpg" alt="Hand Painted Kundan Earrings">
-                <span>Hand-Painted Kundan Earrings</span>
-                <b>Shop Now ↗</b>
-              </a>
-
-              <a class="hero-product" href="https://www.amazon.in/dp/B0HCC5FZ75" target="_blank" rel="noopener">
-                <img src="https://m.media-amazon.com/images/I/71BEnkv23IL._AC_UY218_.jpg" alt="GLAMBB Traditional Earrings">
-                <span>GLAMBB Traditional Earrings</span>
-                <b>Shop Now ↗</b>
-              </a>
-
-              <a class="hero-product" href="https://www.amazon.in/dp/B0HCCLCHPJ" target="_blank" rel="noopener">
-                <img src="https://m.media-amazon.com/images/I/61AVerCo0qL._AC_UY218_.jpg" alt="Gold Plated Temple Earrings">
-                <span>Gold-Plated Temple Earrings</span>
-                <b>Shop Now ↗</b>
-              </a>
-
-              <a class="hero-product" href="https://www.amazon.in/dp/B0HC79C4SK" target="_blank" rel="noopener">
-                <img src="https://m.media-amazon.com/images/I/612NmNAFw9L._AC_UY218_.jpg" alt="Magenta Traditional Earrings">
-                <span>Magenta Traditional Earrings</span>
-                <b>Shop Now ↗</b>
-              </a>
-
-              <a class="hero-product" href="https://www.amazon.in/dp/B0HGBBGZ6K" target="_blank" rel="noopener">
-                <img src="https://m.media-amazon.com/images/I/51pTsvZlqhL._AC_UY218_.jpg" alt="Multicolor Stone Pendant Necklace">
-                <span>Multicolor Stone Pendant Necklace</span>
-                <b>Shop Now ↗</b>
-              </a>
-
-              <a class="hero-product" href="https://www.amazon.in/dp/B0HQ4SSVP2" target="_blank" rel="noopener">
-                <img src="https://m.media-amazon.com/images/I/51vFz6L5JnL._SY625_.jpg" alt="Elegant Anklet">
-                <span>Elegant Anklet</span>
-                <b>Shop Now ↗</b>
-              </a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FEATURE BAND -->
-    <div class="feature-band">
-      <div class="feature-inner">
-        <div>
-          <strong>Curated Style</strong>
-          <span>Thoughtful picks to complement your everyday look.</span>
-        </div>
-        <div>
-          <strong>Gift-worthy Finds</strong>
-          <span>Discover little surprises for the people you love.</span>
-        </div>
-        <div>
-          <strong>Easy Shopping</strong>
-          <span>Browse our collection and shop through our Amazon store.</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- BRACELET COLLECTION -->
-    <section class="collection-section" id="bracelets">
-      <div class="collection-title">
-        <div class="eyebrow">Everyday elegance</div>
-        <h2>Bracelet Collection</h2>
-        <p>Beautiful little details to complete your look.</p>
-      </div>
-
-      <div class="products">
-        <article class="product">
-          <div class="product-image">
-            <img src="https://m.media-amazon.com/images/I/61LfpdsUTXL._SY695_.jpg" alt="American Diamond Bracelet" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-tag">Best Seller</span>
-            <h3>American Diamond Bracelet</h3>
-            <p>Elegant adjustable rectangle American Diamond bracelet for everyday style and special occasions.</p>
-            <a class="buy-btn" href="https://www.amazon.in/dp/B0HCDP2DBB" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="product-image">
-            <img src="https://m.media-amazon.com/images/I/51pUyoJ5DBL._AC_UY218_.jpg" alt="Sparkling Baguette Bracelet" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-tag">Bracelet Collection</span>
-            <h3>Sparkling Baguette Bracelet</h3>
-            <p>A sparkling bracelet design to add a graceful touch to your outfit.</p>
-            <a class="buy-btn" href="https://www.amazon.in/dp/B0HG1Z8P5Q" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="product-image">
-            <img src="https://m.media-amazon.com/images/I/41HTJa6GiAL._AC_UY218_.jpg" alt="Adjustable Anti Tarnish Bracelet" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-tag">Bracelet Collection</span>
-            <h3>Adjustable Anti-Tarnish Bracelet</h3>
-            <p>A versatile bracelet for adding a stylish finishing touch.</p>
-            <a class="buy-btn" href="https://www.amazon.in/dp/B0HFX2DPNQ" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="product-image">
-            <img src="https://m.media-amazon.com/images/I/6175n5FzFLL._AC_UY218_.jpg" alt="Latest Stretch Bracelet" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-tag">GLAMBB Collection</span>
-            <h3>Latest Stretch Bracelet</h3>
-            <p>A charming stretch bracelet for a stylish everyday look.</p>
-            <a class="buy-btn" href="https://www.amazon.in/dp/B0HCJRPQQP" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- EARRING COLLECTION -->
-    <section class="collection-section" id="earrings">
-      <div class="collection-title">
-        <div class="eyebrow">Little details</div>
-        <h2>Earring Collection</h2>
-        <p>Find a beautiful pair for every occasion.</p>
-      </div>
-
-      <div class="products">
-        <article class="product">
-          <div class="product-image">
-            <img src="https://m.media-amazon.com/images/I/61W4y7rC-AL._AC_UY218_.jpg" alt="American Diamond Earrings" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-tag">Earring Collection</span>
-            <h3>American Diamond Earrings</h3>
-            <p>Lightweight earrings designed to complement your everyday style.</p>
-            <a class="buy-btn" href="https://www.amazon.in/dp/B0HC7VX1WS" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="product-image">
-            <img src="https://m.media-amazon.com/images/I/61O9nk0chxL._AC_UY218_.jpg" alt="Traditional Festival Earrings" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-tag">Traditional Collection</span>
-            <h3>Traditional Festival Earrings</h3>
-            <p>A traditional style accessory for celebrations and special occasions.</p>
-            <a class="buy-btn" href="https://www.amazon.in/dp/B0HCBQCLG2" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="product-image">
-            <img src="https://m.media-amazon.com/images/I/71KxHpqYsAL._AC_UY218_.jpg" alt="Hand Painted Kundan Style Earrings" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-tag">Traditional Collection</span>
-            <h3>Hand-Painted Kundan-Style Earrings</h3>
-            <p>A decorative earring style for festive and traditional outfits.</p>
-            <a class="buy-btn" href="https://www.amazon.in/dp/B0HCBWN7WF" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="product-image">
-            <img src="https://m.media-amazon.com/images/I/71BEnkv23IL._AC_UY218_.jpg" alt="GLAMBB Traditional Earrings" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-tag">GLAMBB Collection</span>
-            <h3>GLAMBB Traditional Earrings</h3>
-            <p>A beautiful traditional accessory for weddings and festivals.</p>
-            <a class="buy-btn" href="https://www.amazon.in/dp/B0HCC5FZ75" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="product-image">
-            <img src="https://m.media-amazon.com/images/I/61AVerCo0qL._AC_UY218_.jpg" alt="Gold Plated Temple Earrings" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-tag">Traditional Collection</span>
-            <h3>Gold-Plated Temple Earrings</h3>
-            <p>Traditional temple-inspired earrings for festive styling.</p>
-            <a class="buy-btn" href="https://www.amazon.in/dp/B0HCCLCHPJ" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="product-image">
-            <img src="https://m.media-amazon.com/images/I/612NmNAFw9L._AC_UY218_.jpg" alt="Magenta Traditional Earrings" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-tag">Best Seller</span>
-            <h3>Magenta Traditional Earrings</h3>
-            <p>Beautiful traditional earrings for weddings, festivals and celebrations.</p>
-            <a class="buy-btn" href="https://www.amazon.in/dp/B0HC79C4SK" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- NECKLACE COLLECTION -->
-    <section class="collection-section" id="necklaces">
-      <div class="collection-title">
-        <div class="eyebrow">Made to stand out</div>
-        <h2>Necklace Collection</h2>
-        <p>Explore a special touch for your favourite outfits.</p>
-      </div>
-
-      <div class="products">
-        <article class="product">
-          <div class="product-image">
-            <img src="https://m.media-amazon.com/images/I/51pTsvZlqhL._AC_UY218_.jpg" alt="Multicolor Stone Pendant Necklace" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-tag">Necklace Collection</span>
-            <h3>Multicolor Stone Pendant Necklace</h3>
-            <p>A colourful pendant necklace to complement your style.</p>
-            <a class="buy-btn" href="https://www.amazon.in/dp/B0HGBBGZ6K" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ANKLET COLLECTION -->
-    <section class="collection-section" id="anklets">
-      <div class="collection-title">
-        <div class="eyebrow">Perfect little picks</div>
-        <h2>Anklet Collection</h2>
-        <p>Add a lovely finishing touch to your look.</p>
-      </div>
-
-      <div class="products">
-        <article class="product">
-          <div class="product-image">
-            <img src="https://m.media-amazon.com/images/I/51vFz6L5JnL._SY625_.jpg" alt="Elegant Anklet" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-tag">New Collection</span>
-            <h3>Elegant Anklet</h3>
-            <p>A beautiful accessory to add a stylish touch to your everyday look.</p>
-            <a class="buy-btn" href="https://www.amazon.in/dp/B0HQ4SSVP2" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-      <div class="about-art">
-        A little detail.<br>
-        A whole new feeling.
-      </div>
-      <div>
-        <div class="eyebrow">The world of Glambb</div>
-        <h2>Style that feels like you.</h2>
-        <p>
-          At Glambb World, we believe the right little detail can make an
-          everyday moment feel special. Explore our growing range of
-          accessories and lifestyle finds, selected to bring more charm
-          to your routine and your celebrations.
-        </p>
-        <a class="btn"
-           href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share"
-           target="_blank" rel="noopener">
-          Discover our store ↗
-        </a>
-      </div>
-    </section>
-
-    <!-- AMAZON STORE CTA -->
-    <div class="cta" id="contact">
-      <h2>Find something you’ll love.</h2>
-      <p>Explore the collection and shop securely through our Amazon storefront.</p>
-      <a class="btn"
-         href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share"
-         target="_blank" rel="noopener">
-        Visit Amazon Store ↗
-      </a>
-    </div>
-  </main>
-
-  <footer>
-    <div class="brand">Glambb World</div>
-    <p>Everyday style. Thoughtful little finds.</p>
-    <div class="footlinks">
-      <a href="#home">Home</a>
-      <a href="#bracelets">Collections</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share" target="_blank" rel="noopener">Amazon Store</a>
-    </div>
-    <p class="note">Product availability, prices and checkout are handled on Amazon.</p>
-    <p class="note">© 2026 Glambb World. All rights reserved.</p>
-  </footer>
+<div class="announcement">
+  A LITTLE SPARKLE, A LOT OF PERSONALITY · DISCOVER YOUR EVERYDAY STYLE
 </div>
 
-<!-- DUPLICATE SLIDES FOR SEAMLESS LOOP -->
+<header>
+  <a class="brand" href="#home">
+    Glambb World
+    <small>STYLE • BEAUTY • YOU</small>
+  </a>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#bracelets">Bracelets</a>
+    <a href="#earrings">Earrings</a>
+    <a href="#necklaces">Necklaces</a>
+    <a href="#anklets">Anklets</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO: HEADLINE, SLIDER, DESCRIPTION -->
+
+  <section class="hero" id="home">
+    <div class="hero-panel">
+
+      <div class="hero-heading">
+        <div class="hero-eyebrow">Welcome to Glambb World</div>
+        <h1>Little Details. Beautiful Moments.</h1>
+      </div>
+
+      <div class="slider-wrap">
+        <div class="product-slider" id="productSlider">
+          <div class="product-track" id="productTrack"></div>
+        </div>
+        <div class="slider-hint">✧ Discover your everyday sparkle ✧</div>
+      </div>
+
+      <div class="hero-bottom">
+        <h2>Find Your Little Sparkle</h2>
+        <p>
+          From elegant bracelets to beautiful earrings, discover accessories
+          that make everyday moments feel special. Explore your favourites
+          and add a little more beauty to your style.
+        </p>
+        <a class="main-button"
+           href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share"
+           target="_blank" rel="noopener">
+          Explore Our Collection ↗
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+
+  <div class="feature-band">
+    <div class="feature-inner">
+      <div class="feature-item">
+        <strong>Curated Style</strong>
+        <span>Thoughtful picks to complement your everyday look.</span>
+      </div>
+      <div class="feature-item">
+        <strong>Gift-worthy Finds</strong>
+        <span>Discover little surprises for the people you love.</span>
+      </div>
+      <div class="feature-item">
+        <strong>Easy Shopping</strong>
+        <span>Browse our collection and shop through our Amazon store.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BRACELETS -->
+
+  <section class="collection" id="bracelets">
+    <div class="section-heading">
+      <div class="eyebrow">Everyday elegance</div>
+      <h2>Bracelet Collection</h2>
+      <p>Beautiful little details to complete your look.</p>
+    </div>
+    <div class="product-grid" id="braceletGrid"></div>
+  </section>
+
+  <!-- EARRINGS -->
+
+  <section class="collection" id="earrings">
+    <div class="section-heading">
+      <div class="eyebrow">Little details</div>
+      <h2>Earring Collection</h2>
+      <p>Find a beautiful pair for every occasion.</p>
+    </div>
+    <div class="product-grid" id="earringGrid"></div>
+  </section>
+
+  <!-- NECKLACES -->
+
+  <section class="collection" id="necklaces">
+    <div class="section-heading">
+      <div class="eyebrow">Made to stand out</div>
+      <h2>Necklace Collection</h2>
+      <p>Explore a special touch for your favourite outfits.</p>
+    </div>
+    <div class="product-grid" id="necklaceGrid"></div>
+  </section>
+
+  <!-- ANKLETS -->
+
+  <section class="collection" id="anklets">
+    <div class="section-heading">
+      <div class="eyebrow">Perfect little picks</div>
+      <h2>Anklet Collection</h2>
+      <p>Add a lovely finishing touch to your look.</p>
+    </div>
+    <div class="product-grid" id="ankletGrid"></div>
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+    <div class="about-art">
+      A little detail.<br>
+      A whole new feeling.
+    </div>
+
+    <div class="about-copy">
+      <div class="eyebrow">The world of Glambb</div>
+      <h2>Style that feels like you.</h2>
+      <p>
+        At Glambb World, we believe the right little detail can make an
+        everyday moment feel special. Explore our growing range of
+        accessories and lifestyle finds, selected to bring more charm
+        to your routine and your celebrations.
+      </p>
+      <a class="main-button"
+         href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share"
+         target="_blank" rel="noopener">
+        Discover Our Store ↗
+      </a>
+    </div>
+  </section>
+
+  <!-- AMAZON STORE CTA -->
+
+  <section class="cta" id="contact">
+    <h2>Find Something You’ll Love.</h2>
+    <p>Explore the collection and shop through our Amazon storefront.</p>
+    <a class="main-button"
+       href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share"
+       target="_blank" rel="noopener">
+      Visit Amazon Store ↗
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  <a class="brand" href="#home">Glambb World</a>
+  <p>Everyday style. Thoughtful little finds.</p>
+
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#bracelets">Bracelets</a>
+    <a href="#earrings">Earrings</a>
+    <a href="#necklaces">Necklaces</a>
+    <a href="#anklets">Anklets</a>
+    <a href="#about">About</a>
+    <a href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share" target="_blank" rel="noopener">Amazon Store</a>
+  </div>
+
+  <p class="footer-note">
+    Product availability, prices and checkout are handled on Amazon.
+  </p>
+  <p class="footer-note">© 2026 Glambb World. All rights reserved.</p>
+</footer>
+
 <script>
-(function () {
-  const track = document.getElementById('heroTrack');
-  if (!track || track.dataset.duplicated === 'true') return;
-  track.innerHTML += track.innerHTML;
-  track.dataset.duplicated = 'true';
+/* ALL GLAMBB WORLD PRODUCTS */
+
+const products = [
+  {
+    name: "American Diamond Bracelet",
+    category: "bracelet",
+    tag: "Best Seller",
+    description: "Elegant American Diamond bracelet for everyday style and special occasions.",
+    image: "https://m.media-amazon.com/images/I/61LfpdsUTXL._SY695_.jpg",
+    url: "https://www.amazon.in/dp/B0HCDP2DBB"
+  },
+  {
+    name: "Sparkling Baguette Bracelet",
+    category: "bracelet",
+    tag: "Bracelet Collection",
+    description: "A sparkling bracelet design to add a graceful touch to your outfit.",
+    image: "https://m.media-amazon.com/images/I/51pUyoJ5DBL._AC_UY218_.jpg",
+    url: "https://www.amazon.in/dp/B0HG1Z8P5Q"
+  },
+  {
+    name: "Adjustable Anti-Tarnish Bracelet",
+    category: "bracelet",
+    tag: "Bracelet Collection",
+    description: "A versatile bracelet for adding a stylish finishing touch.",
+    image: "https://m.media-amazon.com/images/I/41HTJa6GiAL._AC_UY218_.jpg",
+    url: "https://www.amazon.in/dp/B0HFX2DPNQ"
+  },
+  {
+    name: "GLAMBB Latest Stretch Bracelet",
+    category: "bracelet",
+    tag: "GLAMBB Collection",
+    description: "A charming stretch bracelet for a stylish everyday look.",
+    image: "https://m.media-amazon.com/images/I/6175n5FzFLL._AC_UY218_.jpg",
+    url: "https://www.amazon.in/dp/B0HCJRPQQP"
+  },
+  {
+    name: "American Diamond Earrings",
+    category: "earring",
+    tag: "Earring Collection",
+    description: "Beautiful earrings to complement your everyday style.",
+    image: "https://m.media-amazon.com/images/I/61W4y7rC-AL._AC_UY218_.jpg",
+    url: "https://www.amazon.in/dp/B0HC7VX1WS"
+  },
+  {
+    name: "Traditional Festival Earrings",
+    category: "earring",
+    tag: "Traditional Collection",
+    description: "A traditional style accessory for celebrations and special occasions.",
+    image: "https://m.media-amazon.com/images/I/61O9nk0chxL._AC_UY218_.jpg",
+    url: "https://www.amazon.in/dp/B0HCBQCLG2"
+  },
+  {
+    name: "Hand-Painted Kundan-Style Earrings",
+    category: "earring",
+    tag: "Traditional Collection",
+    description: "A decorative earring style for festive and traditional outfits.",
+    image: "https://m.media-amazon.com/images/I/71KxHpqYsAL._AC_UY218_.jpg",
+    url: "https://www.amazon.in/dp/B0HCBWN7WF"
+  },
+  {
+    name: "GLAMBB Traditional Earrings",
+    category: "earring",
+    tag: "GLAMBB Collection",
+    description: "A beautiful traditional accessory for weddings and festivals.",
+    image: "https://m.media-amazon.com/images/I/71BEnkv23IL._AC_UY218_.jpg",
+    url: "https://www.amazon.in/dp/B0HCC5FZ75"
+  },
+  {
+    name: "Gold-Plated Temple Earrings",
+    category: "earring",
+    tag: "Traditional Collection",
+    description: "Traditional temple-inspired earrings for festive styling.",
+    image: "https://m.media-amazon.com/images/I/61AVerCo0qL._AC_UY218_.jpg",
+    url: "https://www.amazon.in/dp/B0HCCLCHPJ"
+  },
+  {
+    name: "Magenta Traditional Earrings",
+    category: "earring",
+    tag: "Best Seller",
+    description: "Beautiful traditional earrings for weddings and celebrations.",
+    image: "https://m.media-amazon.com/images/I/612NmNAFw9L._AC_UY218_.jpg",
+    url: "https://www.amazon.in/dp/B0HC79C4SK"
+  },
+  {
+    name: "Multicolor Stone Pendant Necklace",
+    category: "necklace",
+    tag: "Necklace Collection",
+    description: "A colourful pendant necklace to complement your style.",
+    image: "https://m.media-amazon.com/images/I/51pTsvZlqhL._AC_UY218_.jpg",
+    url: "https://www.amazon.in/dp/B0HGBBGZ6K"
+  },
+  {
+    name: "Elegant Anklet",
+    category: "anklet",
+    tag: "New Collection",
+    description: "A beautiful accessory to add a stylish touch to your look.",
+    image: "https://m.media-amazon.com/images/I/51vFz6L5JnL._SY625_.jpg",
+    url: "https://www.amazon.in/dp/B0HQ4SSVP2"
+  }
+];
+
+/* CREATE PRODUCT CARD */
+
+function createSlide(product) {
+  const card = document.createElement("a");
+  card.className = "slide-card";
+  card.href = product.url;
+  card.target = "_blank";
+  card.rel = "noopener";
+
+  const img = document.createElement("img");
+  img.src = product.image;
+  img.alt = product.name;
+  img.loading = "eager";
+
+  const title = document.createElement("h3");
+  title.textContent = product.name;
+
+  const button = document.createElement("span");
+  button.className = "slide-buy";
+  button.textContent = "Shop Now ↗";
+
+  card.append(img, title, button);
+  return card;
+}
+
+/* CREATE COLLECTION CARD */
+
+function createProductCard(product) {
+  const card = document.createElement("article");
+  card.className = "product-card";
+
+  const imageBox = document.createElement("div");
+  imageBox.className = "product-card-image";
+
+  const img = document.createElement("img");
+  img.src = product.image;
+  img.alt = product.name;
+  img.loading = "lazy";
+
+  imageBox.appendChild(img);
+
+  const info = document.createElement("div");
+  info.className = "product-card-info";
+
+  const tag = document.createElement("span");
+  tag.className = "product-tag";
+  tag.textContent = product.tag;
+
+  const title = document.createElement("h3");
+  title.textContent = product.name;
+
+  const description = document.createElement("p");
+  description.textContent = product.description;
+
+  const button = document.createElement("a");
+  button.className = "buy-button";
+  button.href = product.url;
+  button.target = "_blank";
+  button.rel = "noopener";
+  button.textContent = "BUY NOW ON AMAZON ↗";
+
+  info.append(tag, title, description, button);
+  card.append(imageBox, info);
+
+  return card;
+}
+
+/* POPULATE HERO SLIDER AND COLLECTIONS */
+
+const track = document.getElementById("productTrack");
+
+products.forEach(product => {
+  track.appendChild(createSlide(product));
+});
+
+const collectionTargets = {
+  bracelet: "braceletGrid",
+  earring: "earringGrid",
+  necklace: "necklaceGrid",
+  anklet: "ankletGrid"
+};
+
+products.forEach(product => {
+  const target = document.getElementById(collectionTargets[product.category]);
+  if (target) {
+    target.appendChild(createProductCard(product));
+  }
+});
+
+/* AUTOMATIC SLIDE-BY-SLIDE MOVEMENT */
+
+(function setupAutomaticSlider() {
+  const slider = document.getElementById("productSlider");
+  const originalCards = Array.from(track.children);
+
+  if (!slider || originalCards.length === 0) return;
+
+  // Duplicate products to create a seamless repeat.
+  originalCards.forEach(card => {
+    track.appendChild(card.cloneNode(true));
+  });
+
+  let timer = null;
+  let paused = false;
+
+  function getStep() {
+    const card = track.querySelector(".slide-card");
+    if (!card) return 0;
+
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    return card.getBoundingClientRect().width + gap;
+  }
+
+  const originalCount = originalCards.length;
+
+  function moveToNextProduct() {
+    if (paused || document.hidden) return;
+
+    const step = getStep();
+    if (!step) return;
+
+    const originalWidth = step * originalCount;
+    const nextPosition = slider.scrollLeft + step;
+
+    if (nextPosition >= originalWidth - 2) {
+      slider.scrollTo({
+        left: originalWidth,
+        behavior: "smooth"
+      });
+
+      // Reset invisibly to the first original product.
+      setTimeout(() => {
+        if (slider.scrollLeft >= originalWidth - 3) {
+          slider.scrollTo({
+            left: 0,
+            behavior: "instant"
+          });
+        }
+      }, 650);
+
+    } else {
+      slider.scrollTo({
+        left: nextPosition,
+        behavior: "smooth"
+      });
+    }
+  }
+
+  function startSlider() {
+    stopSlider();
+    timer = setInterval(moveToNextProduct, 2800);
+  }
+
+  function stopSlider() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  slider.addEventListener("mouseenter", () => {
+    paused = true;
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    paused = false;
+  });
+
+  slider.addEventListener("touchstart", () => {
+    paused = true;
+  }, {passive:true});
+
+  slider.addEventListener("touchend", () => {
+    paused = false;
+  }, {passive:true});
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopSlider();
+    } else {
+      startSlider();
+    }
+  });
+
+  startSlider();
 })();
 </script>
 
