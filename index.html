@@ -7,7 +7,7 @@
 <title>Glambb World | Everyday Elegance</title>
 <meta name="description" content="Discover beautiful bracelets, earrings, necklaces and anklets at Glambb World. Shop our collections on Amazon India.">
 
-  <!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNKJ3SGEMZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -15,7 +15,7 @@
   gtag('js', new Date());
   gtag('config', 'G-FNKJ3SGEMZ');
 </script>
-  
+
 <style>
 :root {
   --primary:#8b5269;
@@ -24,7 +24,7 @@
   --ink:#30252a;
   --muted:#786b70;
   --line:#e8ddda;
-  --surface:#ffffff;
+  --surface:#fff;
 }
 * {box-sizing:border-box}
 html {scroll-behavior:smooth;scroll-padding-top:20px}
@@ -91,12 +91,14 @@ nav a:hover {color:var(--primary)}
   border-radius:24px;
   background:linear-gradient(112deg,#ead9d5 0%,#f4e9e4 48%,#d8b9bd 100%);
   display:grid;
-  grid-template-columns:1.1fr .9fr;
+  grid-template-columns:.85fr 1.15fr;
   overflow:hidden;
 }
 .hero-copy {
-  padding:70px 7%;
+  padding:55px 7%;
   align-self:center;
+  position:relative;
+  z-index:2;
 }
 .eyebrow {
   font-size:11px;
@@ -105,9 +107,12 @@ nav a:hover {color:var(--primary)}
   text-transform:uppercase;
   font-weight:700;
 }
-h1,h2,h3 {font-family:Georgia,'Times New Roman',serif;font-weight:500}
+h1,h2,h3 {
+  font-family:Georgia,'Times New Roman',serif;
+  font-weight:500;
+}
 h1 {
-  font-size:clamp(42px,5.5vw,70px);
+  font-size:clamp(38px,4.5vw,62px);
   line-height:1.02;
   margin:18px 0;
   max-width:550px;
@@ -117,7 +122,7 @@ h1 {
   color:#66545c;
   line-height:1.8;
   max-width:440px;
-  font-size:15px;
+  font-size:14px;
 }
 .btn {
   display:inline-block;
@@ -133,49 +138,86 @@ h1 {
   border:1px solid var(--primary);
   transition:.2s;
 }
-.btn:hover {background:#6f3e53;transform:translateY(-2px)}
+.btn:hover {
+  background:#6f3e53;
+  transform:translateY(-2px);
+}
+
+/* HERO PRODUCT SLIDER */
 .hero-art {
+  min-width:0;
+  min-height:380px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  padding:25px 0;
+}
+.hero-slider {
+  width:100%;
+  overflow:hidden;
   position:relative;
-  min-height:350px;
+  -webkit-mask-image:linear-gradient(to right,transparent,black 5%,black 95%,transparent);
+  mask-image:linear-gradient(to right,transparent,black 5%,black 95%,transparent);
+}
+.hero-track {
   display:flex;
-  align-items:center;
-  justify-content:center;
+  width:max-content;
+  gap:16px;
+  animation:glambbSlide 48s linear infinite;
 }
-.orb {
-  width:min(300px,75%);
-  aspect-ratio:1;
-  border-radius:50%;
-  background:radial-gradient(circle at 35% 30%,#fffaf5,#d7b7b5 62%,#b98291);
-  box-shadow:0 28px 60px #80596933;
+.hero-slider:hover .hero-track {
+  animation-play-state:paused;
+}
+.hero-product {
+  flex:0 0 190px;
+  width:190px;
+  min-height:285px;
+  padding:13px;
   display:flex;
+  flex-direction:column;
   align-items:center;
-  justify-content:center;
-  transform:rotate(-12deg);
+  justify-content:space-between;
+  text-align:center;
+  text-decoration:none;
+  background:rgba(255,255,255,.9);
+  border:1px solid #ead9d5;
+  border-radius:18px;
+  box-shadow:0 12px 30px #80596918;
+  transition:transform .25s,box-shadow .25s;
 }
-.orb:before {
-  content:"";
-  width:58%;
-  height:58%;
-  border:2px solid #b18b63;
-  border-radius:50%;
-  box-shadow:inset 0 0 0 9px #ffffff22,0 0 0 14px #ffffff20;
+.hero-product:hover {
+  transform:translateY(-7px);
+  box-shadow:0 15px 30px #80596930;
 }
-.orb:after {
-  content:"✧";
-  position:absolute;
-  font-size:100px;
-  color:#fff8ee;
-  text-shadow:0 3px 18px #8b526955;
+.hero-product img {
+  width:100%;
+  height:175px;
+  object-fit:contain;
+  background:white;
+  border-radius:12px;
 }
-.floating {
-  position:absolute;
-  width:76px;
-  height:76px;
-  border-radius:50%;
-  background:#fff8f0;
-  opacity:.65;
-  top:12%;
-  right:14%;
+.hero-product span {
+  display:block;
+  margin:10px 0;
+  color:#422c35;
+  font:16px Georgia,serif;
+  line-height:1.35;
+}
+.hero-product b {
+  display:block;
+  width:100%;
+  padding:10px 8px;
+  color:white;
+  background:var(--primary);
+  border-radius:22px;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+@keyframes glambbSlide {
+  from {transform:translateX(0)}
+  to {transform:translateX(-50%)}
 }
 section {
   max-width:1180px;
@@ -194,36 +236,6 @@ section {
   color:var(--muted);
   font-size:14px;
   line-height:1.7;
-}
-.categories {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-.category {
-  text-decoration:none;
-  text-align:center;
-}
-.cat-art {
-  aspect-ratio:.92;
-  border-radius:16px;
-  display:grid;
-  place-items:center;
-  font-size:52px;
-  color:var(--primary);
-  background:linear-gradient(145deg,#f3e6e1,#dfc5c5);
-  transition:.25s;
-}
-.category:nth-child(2) .cat-art {background:linear-gradient(145deg,#eee6df,#d9c7b5)}
-.category:nth-child(3) .cat-art {background:linear-gradient(145deg,#f2e7ec,#dfc2d1)}
-.category:nth-child(4) .cat-art {background:linear-gradient(145deg,#e8e8e2,#c9d0c7)}
-.category:hover .cat-art {transform:translateY(-5px)}
-.category h3 {font-size:21px;margin:15px 0 5px}
-.category span {
-  font-size:11px;
-  color:var(--muted);
-  letter-spacing:.1em;
-  text-transform:uppercase;
 }
 .feature-band {
   background:var(--secondary);
@@ -248,13 +260,22 @@ section {
   color:#6b555d;
   line-height:1.6;
 }
-.collection-section {padding-top:58px;padding-bottom:35px}
+.collection-section {
+  padding-top:58px;
+  padding-bottom:35px;
+}
 .collection-title {
   text-align:center;
   margin-bottom:28px;
 }
-.collection-title h2 {font-size:34px;margin:8px 0}
-.collection-title p {font-size:13px;color:var(--muted)}
+.collection-title h2 {
+  font-size:34px;
+  margin:8px 0;
+}
+.collection-title p {
+  font-size:13px;
+  color:var(--muted);
+}
 .products {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -339,16 +360,29 @@ section {
   text-align:center;
   padding:25px;
 }
-.about h2 {font-size:42px;margin:12px 0}
-.about p {color:var(--muted);line-height:1.9;font-size:14px}
+.about h2 {
+  font-size:42px;
+  margin:12px 0;
+}
+.about p {
+  color:var(--muted);
+  line-height:1.9;
+  font-size:14px;
+}
 .cta {
   background:#49313d;
   color:white;
   text-align:center;
   padding:58px 20px;
 }
-.cta h2 {font-size:38px;margin:0 0 12px}
-.cta p {color:#e5d6dc;font-size:14px}
+.cta h2 {
+  font-size:38px;
+  margin:0 0 12px;
+}
+.cta p {
+  color:#e5d6dc;
+  font-size:14px;
+}
 .cta .btn {
   background:#ead9d5;
   color:#49313d;
@@ -361,7 +395,11 @@ footer {
   text-align:center;
 }
 footer .brand {color:#f1dfe5}
-footer p {color:#c7b8bf;font-size:12px;line-height:1.8}
+footer p {
+  color:#c7b8bf;
+  font-size:12px;
+  line-height:1.8;
+}
 footer a {color:#f1dfe5}
 .footlinks {
   display:flex;
@@ -371,31 +409,62 @@ footer a {color:#f1dfe5}
   margin:20px 0;
   font-size:12px;
 }
-.note {font-size:11px;color:#b9aab1}
+.note {
+  font-size:11px;
+  color:#b9aab1;
+}
+
 @media(max-width:760px) {
   header {padding:18px}
   nav {display:none}
   .menu {display:block}
   .hero {padding:10px 16px 38px}
   .hero-panel {grid-template-columns:1fr}
-  .hero-copy {padding:48px 28px 10px}
-  .hero-art {min-height:250px}
+  .hero-copy {padding:42px 25px 10px}
+  .hero-art {
+    min-height:315px;
+    padding:15px 0 30px;
+  }
+  .hero-product {
+    flex-basis:165px;
+    width:165px;
+    min-height:260px;
+  }
+  .hero-product img {height:155px}
+  .hero-track {gap:12px;animation-duration:42s}
   section {padding:44px 18px}
-  .categories {grid-template-columns:repeat(2,1fr);gap:22px 14px}
-  .products {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .products {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+  }
   .product-image {height:190px;padding:10px}
   .product-info {padding:12px}
-  .product-info h3 {font-size:17px;min-height:42px}
-  .product-info p {font-size:12px;min-height:55px}
+  .product-info h3 {
+    font-size:17px;
+    min-height:42px;
+  }
+  .product-info p {
+    font-size:12px;
+    min-height:55px;
+  }
   .buy-btn {font-size:10px;padding:11px 8px}
-  .feature-inner {grid-template-columns:1fr;gap:25px}
-  .about {grid-template-columns:1fr;gap:25px}
+  .feature-inner {
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+  .about {
+    grid-template-columns:1fr;
+    gap:25px;
+  }
   .about-art {min-height:220px}
   .section-head h2 {font-size:32px}
 }
 @media(max-width:380px) {
   .products {grid-template-columns:1fr}
   .product-image {height:250px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .hero-track {animation:none}
 }
 </style>
 </head>
@@ -414,36 +483,122 @@ footer a {color:#f1dfe5}
     </a>
     <nav>
       <a href="#home">Home</a>
-      <a href="#categories">Collections</a>
       <a href="#bracelets">Bracelets</a>
       <a href="#earrings">Earrings</a>
+      <a href="#necklaces">Necklaces</a>
+      <a href="#anklets">Anklets</a>
       <a href="#about">About</a>
     </nav>
-    <button class="menu" onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})">
+    <button class="menu" onclick="document.getElementById('bracelets').scrollIntoView({behavior:'smooth'})">
       Explore ↓
     </button>
   </header>
 
   <main>
-
+    <!-- HERO WITH AUTOMATIC PRODUCT SLIDER -->
     <div class="hero" id="home">
       <div class="hero-panel">
+
         <div class="hero-copy">
           <div class="eyebrow">Welcome to Glambb World</div>
-          <h1>Make every day a little more beautiful.</h1>
-          <p>Discover thoughtful accessories and everyday favourites designed to add a special touch to your style.</p>
-          <a class="btn" href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share" target="_blank" rel="noopener">
-            Shop on Amazon ↗
+          <h1>Little Details. Beautiful Moments.</h1>
+          <p>
+            Discover your next favourite accessory. Elegant bracelets,
+            beautiful earrings and more — made to make every moment special.
+          </p>
+          <a class="btn"
+             href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share"
+             target="_blank" rel="noopener">
+            Explore Our Collection ↗
           </a>
+          <div style="margin-top:22px;color:#8b5269;font:14px Georgia,serif;letter-spacing:.08em">
+            ✧ Discover your everyday sparkle ✧
+          </div>
         </div>
+
         <div class="hero-art">
-          <div class="floating"></div>
-          <div class="orb"></div>
+          <div class="hero-slider">
+            <div class="hero-track" id="heroTrack">
+
+              <a class="hero-product" href="https://www.amazon.in/dp/B0HCDP2DBB" target="_blank" rel="noopener">
+                <img src="https://m.media-amazon.com/images/I/61LfpdsUTXL._SY695_.jpg" alt="American Diamond Bracelet">
+                <span>American Diamond Bracelet</span>
+                <b>Shop Now ↗</b>
+              </a>
+
+              <a class="hero-product" href="https://www.amazon.in/dp/B0HG1Z8P5Q" target="_blank" rel="noopener">
+                <img src="https://m.media-amazon.com/images/I/51pUyoJ5DBL._AC_UY218_.jpg" alt="Sparkling Baguette Bracelet">
+                <span>Sparkling Baguette Bracelet</span>
+                <b>Shop Now ↗</b>
+              </a>
+
+              <a class="hero-product" href="https://www.amazon.in/dp/B0HFX2DPNQ" target="_blank" rel="noopener">
+                <img src="https://m.media-amazon.com/images/I/41HTJa6GiAL._AC_UY218_.jpg" alt="Adjustable Anti Tarnish Bracelet">
+                <span>Adjustable Anti-Tarnish Bracelet</span>
+                <b>Shop Now ↗</b>
+              </a>
+
+              <a class="hero-product" href="https://www.amazon.in/dp/B0HCJRPQQP" target="_blank" rel="noopener">
+                <img src="https://m.media-amazon.com/images/I/6175n5FzFLL._AC_UY218_.jpg" alt="GLAMBB Stretch Bracelet">
+                <span>GLAMBB Stretch Bracelet</span>
+                <b>Shop Now ↗</b>
+              </a>
+
+              <a class="hero-product" href="https://www.amazon.in/dp/B0HC7VX1WS" target="_blank" rel="noopener">
+                <img src="https://m.media-amazon.com/images/I/61W4y7rC-AL._AC_UY218_.jpg" alt="American Diamond Earrings">
+                <span>American Diamond Earrings</span>
+                <b>Shop Now ↗</b>
+              </a>
+
+              <a class="hero-product" href="https://www.amazon.in/dp/B0HCBQCLG2" target="_blank" rel="noopener">
+                <img src="https://m.media-amazon.com/images/I/61O9nk0chxL._AC_UY218_.jpg" alt="Traditional Festival Earrings">
+                <span>Traditional Festival Earrings</span>
+                <b>Shop Now ↗</b>
+              </a>
+
+              <a class="hero-product" href="https://www.amazon.in/dp/B0HCBWN7WF" target="_blank" rel="noopener">
+                <img src="https://m.media-amazon.com/images/I/71KxHpqYsAL._AC_UY218_.jpg" alt="Hand Painted Kundan Earrings">
+                <span>Hand-Painted Kundan Earrings</span>
+                <b>Shop Now ↗</b>
+              </a>
+
+              <a class="hero-product" href="https://www.amazon.in/dp/B0HCC5FZ75" target="_blank" rel="noopener">
+                <img src="https://m.media-amazon.com/images/I/71BEnkv23IL._AC_UY218_.jpg" alt="GLAMBB Traditional Earrings">
+                <span>GLAMBB Traditional Earrings</span>
+                <b>Shop Now ↗</b>
+              </a>
+
+              <a class="hero-product" href="https://www.amazon.in/dp/B0HCCLCHPJ" target="_blank" rel="noopener">
+                <img src="https://m.media-amazon.com/images/I/61AVerCo0qL._AC_UY218_.jpg" alt="Gold Plated Temple Earrings">
+                <span>Gold-Plated Temple Earrings</span>
+                <b>Shop Now ↗</b>
+              </a>
+
+              <a class="hero-product" href="https://www.amazon.in/dp/B0HC79C4SK" target="_blank" rel="noopener">
+                <img src="https://m.media-amazon.com/images/I/612NmNAFw9L._AC_UY218_.jpg" alt="Magenta Traditional Earrings">
+                <span>Magenta Traditional Earrings</span>
+                <b>Shop Now ↗</b>
+              </a>
+
+              <a class="hero-product" href="https://www.amazon.in/dp/B0HGBBGZ6K" target="_blank" rel="noopener">
+                <img src="https://m.media-amazon.com/images/I/51pTsvZlqhL._AC_UY218_.jpg" alt="Multicolor Stone Pendant Necklace">
+                <span>Multicolor Stone Pendant Necklace</span>
+                <b>Shop Now ↗</b>
+              </a>
+
+              <a class="hero-product" href="https://www.amazon.in/dp/B0HQ4SSVP2" target="_blank" rel="noopener">
+                <img src="https://m.media-amazon.com/images/I/51vFz6L5JnL._SY625_.jpg" alt="Elegant Anklet">
+                <span>Elegant Anklet</span>
+                <b>Shop Now ↗</b>
+              </a>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    
+    <!-- FEATURE BAND -->
     <div class="feature-band">
       <div class="feature-inner">
         <div>
@@ -470,7 +625,6 @@ footer a {color:#f1dfe5}
       </div>
 
       <div class="products">
-
         <article class="product">
           <div class="product-image">
             <img src="https://m.media-amazon.com/images/I/61LfpdsUTXL._SY695_.jpg" alt="American Diamond Bracelet" loading="lazy">
@@ -518,7 +672,6 @@ footer a {color:#f1dfe5}
             <a class="buy-btn" href="https://www.amazon.in/dp/B0HCJRPQQP" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
           </div>
         </article>
-
       </div>
     </section>
 
@@ -531,7 +684,6 @@ footer a {color:#f1dfe5}
       </div>
 
       <div class="products">
-
         <article class="product">
           <div class="product-image">
             <img src="https://m.media-amazon.com/images/I/61W4y7rC-AL._AC_UY218_.jpg" alt="American Diamond Earrings" loading="lazy">
@@ -603,7 +755,6 @@ footer a {color:#f1dfe5}
             <a class="buy-btn" href="https://www.amazon.in/dp/B0HC79C4SK" target="_blank" rel="noopener">Buy Now on Amazon ↗</a>
           </div>
         </article>
-
       </div>
     </section>
 
@@ -662,8 +813,15 @@ footer a {color:#f1dfe5}
       <div>
         <div class="eyebrow">The world of Glambb</div>
         <h2>Style that feels like you.</h2>
-        <p>At Glambb World, we believe the right little detail can make an everyday moment feel special. Explore our growing range of accessories and lifestyle finds, selected to bring more charm to your routine and your celebrations.</p>
-        <a class="btn" href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share" target="_blank" rel="noopener">
+        <p>
+          At Glambb World, we believe the right little detail can make an
+          everyday moment feel special. Explore our growing range of
+          accessories and lifestyle finds, selected to bring more charm
+          to your routine and your celebrations.
+        </p>
+        <a class="btn"
+           href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share"
+           target="_blank" rel="noopener">
           Discover our store ↗
         </a>
       </div>
@@ -673,11 +831,12 @@ footer a {color:#f1dfe5}
     <div class="cta" id="contact">
       <h2>Find something you’ll love.</h2>
       <p>Explore the collection and shop securely through our Amazon storefront.</p>
-      <a class="btn" href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share" target="_blank" rel="noopener">
+      <a class="btn"
+         href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share"
+         target="_blank" rel="noopener">
         Visit Amazon Store ↗
       </a>
     </div>
-
   </main>
 
   <footer>
@@ -685,7 +844,7 @@ footer a {color:#f1dfe5}
     <p>Everyday style. Thoughtful little finds.</p>
     <div class="footlinks">
       <a href="#home">Home</a>
-      <a href="#categories">Collections</a>
+      <a href="#bracelets">Collections</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
       <a href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share" target="_blank" rel="noopener">Amazon Store</a>
@@ -693,7 +852,17 @@ footer a {color:#f1dfe5}
     <p class="note">Product availability, prices and checkout are handled on Amazon.</p>
     <p class="note">© 2026 Glambb World. All rights reserved.</p>
   </footer>
-
 </div>
+
+<!-- DUPLICATE SLIDES FOR SEAMLESS LOOP -->
+<script>
+(function () {
+  const track = document.getElementById('heroTrack');
+  if (!track || track.dataset.duplicated === 'true') return;
+  track.innerHTML += track.innerHTML;
+  track.dataset.duplicated = 'true';
+})();
+</script>
+
 </body>
 </html>
