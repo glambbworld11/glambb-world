@@ -463,6 +463,106 @@ nav a:hover {
   line-height: 1.9;
 }
 
+/* PREMIUM FAQ SECTION */
+
+.glambb-faq {
+  background: #fbf7f4;
+  padding: 75px 22px 80px;
+}
+
+.glambb-faq-inner {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.glambb-faq-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.glambb-faq-heading .eyebrow {
+  color: #8b5269;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.glambb-faq-heading h2 {
+  font: 42px Georgia, serif;
+  color: #422c35;
+  margin: 12px 0;
+}
+
+.glambb-faq-heading p {
+  color: #786b70;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.glambb-faq-list {
+  border-top: 1px solid #eadedb;
+}
+
+.glambb-faq-item {
+  border-bottom: 1px solid #eadedb;
+}
+
+.glambb-faq-item details {
+  padding: 0;
+}
+
+.glambb-faq-item summary {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 48px 22px 4px;
+  color: #49313d;
+  font: 19px Georgia, serif;
+  line-height: 1.5;
+}
+
+.glambb-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.glambb-faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8b5269;
+  font: 26px Arial, sans-serif;
+  transition: transform .25s;
+}
+
+.glambb-faq-item details[open] summary::after {
+  content: "−";
+}
+
+.glambb-faq-item summary:hover {
+  color: #8b5269;
+}
+
+.glambb-faq-answer {
+  padding: 0 42px 22px 4px;
+  color: #786b70;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.glambb-faq-answer a {
+  color: #8b5269;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.glambb-faq-answer a:hover {
+  text-decoration: underline;
+}
+
 /* CALL TO ACTION */
 
 .cta {
@@ -644,6 +744,28 @@ footer p {
     font-size: 35px;
   }
 
+  .glambb-faq {
+    padding: 55px 19px 60px;
+  }
+
+  .glambb-faq-heading {
+    margin-bottom: 27px;
+  }
+
+  .glambb-faq-heading h2 {
+    font-size: 34px;
+  }
+
+  .glambb-faq-item summary {
+    font-size: 16px;
+    padding: 19px 38px 19px 3px;
+  }
+
+  .glambb-faq-answer {
+    font-size: 12px;
+    padding-right: 20px;
+  }
+
   .cta h2 {
     font-size: 31px;
   }
@@ -811,6 +933,92 @@ footer p {
     </div>
   </section>
 
+  <!-- PREMIUM FAQ -->
+
+  <section class="glambb-faq" id="faq">
+    <div class="glambb-faq-inner">
+
+      <div class="glambb-faq-heading">
+        <div class="eyebrow">We're here to help</div>
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Find answers to common questions about shopping with Glambb World.
+        </p>
+      </div>
+
+      <div class="glambb-faq-list">
+
+        <div class="glambb-faq-item">
+          <details>
+            <summary>Where can I purchase Glambb World products?</summary>
+            <div class="glambb-faq-answer">
+              You can explore and purchase our available products through our
+              official Amazon storefront.
+              <a href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share"
+                 target="_blank" rel="noopener">Visit our Amazon Store ↗</a>
+            </div>
+          </details>
+        </div>
+
+        <div class="glambb-faq-item">
+          <details>
+            <summary>Where can I check product prices?</summary>
+            <div class="glambb-faq-answer">
+              Current prices and offers are displayed on the individual Amazon
+              product pages. Prices and availability may change, so please
+              check Amazon for the latest information.
+            </div>
+          </details>
+        </div>
+
+        <div class="glambb-faq-item">
+          <details>
+            <summary>How can I check delivery availability?</summary>
+            <div class="glambb-faq-answer">
+              Open the product page on Amazon and enter your PIN code to check
+              delivery availability and the estimated delivery date for your area.
+            </div>
+          </details>
+        </div>
+
+        <div class="glambb-faq-item">
+          <details>
+            <summary>Can I return or replace a product?</summary>
+            <div class="glambb-faq-answer">
+              Return and replacement eligibility depends on the product and
+              Amazon's applicable policies. Please check the return information
+              shown on the product page before placing your order.
+            </div>
+          </details>
+        </div>
+
+        <div class="glambb-faq-item">
+          <details>
+            <summary>How can I discover new collections?</summary>
+            <div class="glambb-faq-answer">
+              Visit this website or our Amazon storefront to explore the products
+              currently available. We may add new styles and collections over time.
+              <a href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share"
+                 target="_blank" rel="noopener">Explore the Collection ↗</a>
+            </div>
+          </details>
+        </div>
+
+        <div class="glambb-faq-item">
+          <details>
+            <summary>How can I contact Glambb World?</summary>
+            <div class="glambb-faq-answer">
+              For product-related questions or order support, please use the
+              contact and support options available through Amazon and the
+              relevant product or order page.
+            </div>
+          </details>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- AMAZON STORE CTA -->
 
   <section class="cta" id="contact">
@@ -836,6 +1044,7 @@ footer p {
     <a href="#necklaces">Necklaces</a>
     <a href="#anklets">Anklets</a>
     <a href="#about">About</a>
+    <a href="#faq">FAQs</a>
     <a href="https://www.amazon.in/l/27943762031?me=A2YOY9TGB6TPXK&ref_=ssf_share" target="_blank" rel="noopener">Amazon Store</a>
   </div>
 
@@ -1097,7 +1306,7 @@ products.forEach(product => {
 
   function startSlider() {
     stopSlider();
-    timer = setInterval(moveToNextProduct, 2800);
+    timer = setInterval(moveToNextProduct, 1800);
   }
 
   function stopSlider() {
